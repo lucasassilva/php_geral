@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Posts{% endblock %}
+
+{% block body %}
+
+    <div class="container p-4">
+        <h3>Lista de Postagens</h3>
+        <a class="btn btn-success" href="{{ path("post_add") }}">Adicionar Post</a>
+        <hr />
+        {% for key in posts|keys %}
+            <div class="card mb-4">
+                <div class="card-title bg-primary">
+                    <h5 class="text-white p-3">{{ posts[key].title }}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="lead">{{ posts[key].description }}</p>
+                    <hr />
+                    <form action="{{ path("post_delete", {"id": posts[key].id}) }}" method="post" onsubmit="return confirm('Você deseja excluir esse post ?')">
+                        <button class="btn btn-danger" type="submit">Deletar</button>
+                        <a class="btn btn-warning" type="button" href="{{ path("post_show", {"id": posts[key].id}) }}">
+                            Editar
+                        </a>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+{% endblock %}

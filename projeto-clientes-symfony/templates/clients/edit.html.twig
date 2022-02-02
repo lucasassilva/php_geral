@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clients - Edit{% endblock %}
+
+{% block body %}
+
+	<div class="container mt-4">
+
+		<h3>Editar cliente</h3>
+		<hr />
+
+		{{ form_start(form) }}
+
+		<div class="form-group mb-2 {% if not form.name.vars.valid %}error{% endif %}">
+			{{ form_label(form.name) }}
+			{{ form_widget(form.name) }}
+			<span class="error">{{ errors['name'] ?? null }}</span>
+			{# {{form_errors(form.name)}} #}
+		</div>
+		<div class="form-group mb-2 {% if not form.email.vars.valid %}error{% endif %}">
+			{{ form_label(form.email) }}
+			{{ form_widget(form.email) }}
+			<span class="error">{{ errors['email'] ?? null }}</span>
+			{# {{form_errors(form.email)}} #}
+		</div>
+
+		<div class="form-group mb-2 {% if not form.age.vars.valid %}error{% endif %}">
+			{{ form_label(form.age) }}
+			{{ form_widget(form.age, {"type":"number" } ) }}
+			<span class="error">{{ errors['age'] ?? null }}</span>
+			{# {{form_errors(form.age)}} #}
+		</div>
+
+		{{ form_widget(form.save, { "label": "Editar" }) }}
+
+		{{ form_end(form) }}<br>
+
+		<a href="{{ path('client_index') }}">Voltar ao inicio</a>
+
+	</div>
+	
+{% endblock %}

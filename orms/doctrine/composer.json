@@ -1,0 +1,22 @@
+{
+  "name": "lucas/doctrine",
+  "authors": [
+    {
+      "name": "Lucas",
+      "email": "web.m.lucasalves@outlook.com"
+    }
+  ],
+  "require": {
+    "erandir/plug-route": "^4.4",
+    "doctrine/orm": "^2.10",
+    "symfony/cache": "^5.4",
+    "symfony/yaml": "^5.4",
+    "vlucas/phpdotenv": "^5.4",
+    "doctrine/migrations": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Application\\": "src/app/"
+    }
+  }
+}

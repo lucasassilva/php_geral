@@ -1,0 +1,20 @@
+{
+  "name": "lucas/eloquent",
+  "authors": [
+    {
+      "name": "Lucas",
+      "email": "web.m.lucasalves@outlook.com"
+    }
+  ],
+  "require": {
+    "sunrise/http-message": "^2.1",
+    "sunrise/http-server-request": "^2.0",
+    "sunrise/http-router": "^2.11",
+    "illuminate/database": "^8.74"
+  },
+  "autoload": {
+    "psr-4": {
+      "Application\\": "src/app/"
+    }
+  }
+}

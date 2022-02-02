@@ -1,0 +1,26 @@
+client_index:
+   path: /
+   controller: App\Controller\ClientController::index
+   methods: GET
+
+client_new:
+   path: /new
+   controller: App\Controller\ClientController::new
+   methods: [GET|POST]
+
+client_show:
+   path: /{id}
+   controller: App\Controller\ClientController::show
+   methods: [GET]
+
+client_edit:
+   path: /edit/{id}
+   controller: App\Controller\ClientController::edit
+   methods: [GET|POST]
+
+client_delete:
+   path: /{id}
+   controller: App\Controller\ClientController::delete
+   methods: [GET|DELETE]
+   
+

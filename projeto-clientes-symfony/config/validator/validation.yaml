@@ -1,0 +1,29 @@
+App\Entity\Client:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+        fields: [email]
+        message: "E-mail já cadastrado do cliente"
+  properties:
+    name:
+      - NotBlank:
+          message: "O campo nome é obrigatório"
+      - Length:
+          max: 100
+          maxMessage: "Use no máximo 100 caracteres"
+      - Regex:
+          pattern: "/^[A-Za-z]+$/"
+          message: "Nome inválido"
+    email:
+      - NotBlank:
+          message: "O campo e-mail é obrigatório"
+      - Length:
+          max: 255
+          maxMessage: "Use no máximo 255 caracteres"
+    age:
+      - NotBlank:
+          message: "O campo idade é obrigatório"
+      - Positive:
+          message: "Idade inválida"
+      - Regex:
+          pattern: "/^[0-9]*$/"
+          message: "Idade inválida"

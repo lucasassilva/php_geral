@@ -1,0 +1,12 @@
+{
+  "name": "lucas/slim",
+  "authors": [
+    {
+      "name": "Lucas",
+      "email": "web.m.lucasalves@outlook.com"
+    }
+  ],
+  "require": {
+    "slim/slim": "3.*"
+  }
+}

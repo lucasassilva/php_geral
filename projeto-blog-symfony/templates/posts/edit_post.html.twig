@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Posts - Edit{% endblock %}
+
+{% block body %}
+
+        <div class="container p-4">
+        <h3>Editar postagem</h3>
+        <hr />
+        <div class="card">
+            <div class="card-body">
+
+                {{ form_start(form, {"action": "/update/" ~ posts.id, "attr": {"method": "post"}}) }}
+
+                    <div class="mb-2">
+                        {{ form_label(form.title) }}
+                        {{ form_widget(form.title, {"value": posts.title }) }}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form_label(form.description) }}
+                        {{ form_widget(form.description,  {"value": posts.description }) }}
+                    </div>
+
+                  {{ form_widget(form.save, { "label": "Editar" }) }}
+                
+                {{ form_end(form) }}
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

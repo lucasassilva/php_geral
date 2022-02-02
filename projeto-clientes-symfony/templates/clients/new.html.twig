@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Clients - New{% endblock %}
+
+{% block body %}
+
+	<div class="container mt-4">
+		<h3>Criar um novo cliente</h3>
+		<hr />
+		{{ form_start(form)}}
+
+		<div class="form-group mb-2">
+			{{ form_label(form.name) }}
+			{{ form_widget(form.name) }}
+			<span class="text-danger">{{ errors["name"] ?? null }}</span>
+			{# {{form_errors(form.name)}} #}
+		</div>
+		<div class="form-group mb-2">
+			{{ form_label(form.email) }}
+			{{ form_widget(form.email) }}
+			<span class="text-danger">{{ errors["email"] ?? null }}</span>
+			{# {{form_errors(form.email)}} #}
+		</div>
+
+		<div class="form-group mb-2">
+			{{ form_label(form.age) }}
+			{{ form_widget(form.age, {"type":"number" } ) }}
+			<span class="text-danger">{{ errors["age"] ?? null }}</span>
+			{# {{form_errors(form.age)}} #}
+		</div> 
+
+		{{ form_widget(form.save, { "label": "Cadastrar" }) }}
+
+		{{ form_end(form) }}<br>
+
+		<a href="{{ path("client_index") }}">Voltar ao inicio</a>
+		
+	</div>
+
+{% endblock %}
+
+
+
+	

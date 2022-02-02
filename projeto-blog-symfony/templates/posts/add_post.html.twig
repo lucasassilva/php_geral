@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Posts - Add{% endblock %}
+
+{% block body %}
+
+    <div class="container p-4">
+        <h3>Criar uma nova postagem</h3>
+        <hr />
+        <div class="card">
+            <div class="card-body">
+
+               {{ form_start(form, {"action": "/create", "attr": {"method": "post"}}) }}
+
+                    <div class="mb-2">
+                        {{ form_label(form.title) }}
+                        {{ form_widget(form.title) }}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form_label(form.description) }}
+                        {{ form_widget(form.description) }}
+                    </div>
+
+                  {{ form_widget(form.save, { "label": "Cadastrar" }) }}
+                
+                {{ form_end(form) }}
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,23 @@
+{
+  "name": "lucas/propel",
+  "authors": [
+    {
+      "name": "Lucas",
+      "email": "web.m.lucasalves@outlook.com"
+    }
+  ],
+  "require": {
+    "propel/propel": "~2.0@dev",
+    "noahbuscher/macaw": "dev-master"
+  },
+  "autoload": {
+    "classmap": [
+      "./src/app/models/generated-classes/",
+      "./src/app/models/generated-classes/Base/",
+      "./src/app/models/generated-classes/Map/"
+    ],
+    "psr-4": {
+      "Application\\": "src/app/"
+    }
+  }
+}
