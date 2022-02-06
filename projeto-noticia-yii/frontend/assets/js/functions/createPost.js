@@ -21,7 +21,7 @@ function createPost() {
           if (xhr.readyState == 4 && xhr.status == 200) {
             resolve(xhr.responseText);
           } else if (xhr.status === 404) {
-            reject(new Error("Registro não cadastrado"));
+            reject(new Error("Ocorreu um erro ao cadastrar uma postagem"));
           }
         };
 

@@ -30,7 +30,7 @@ function contactForm() {
           if (xhr.readyState == 4 && xhr.status == 200) {
             resolve(xhr.responseText);
           } else if (xhr.status === 404) {
-            reject(new Error("Ocorreu um erro no formulário"));
+            reject(new Error("Ocorreu um erro ao enviar o formulário"));
           }
         };
 
