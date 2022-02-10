@@ -1,0 +1,13 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/styles.css": "/css/styles.css",
+    "/css/font-awesome.css": "/css/font-awesome.css",
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/js/jquery.js": "/js/jquery.js",
+    "/js/bootstrap.js": "/js/bootstrap.js",
+    "/js/jquery.mask.js": "/js/jquery.mask.js",
+    "/js/jquery.dataTables.js": "/js/jquery.dataTables.js",
+    "/css/jquery.dataTables.css": "/css/jquery.dataTables.css",
+    "/js/sweetalert2.js": "/js/sweetalert2.js",
+    "/css/sweetalert2.css": "/css/sweetalert2.css"
+}
